@@ -28,3 +28,21 @@ function criarListaVisivel(){
     listaNomes.innerHTML += "<li>" + nome + "</li>";
   }
 }
+
+function sortearAmigo() {
+  // Não deixar sortear se nao tiver um nome adicionado
+  if (nomeAmigos.length === 0){
+    alert("Não tem nenhum amigo na lista!");
+    return;
+  }
+  // Sorteador do nome
+  let indice = Math.floor(Math.random() * nomeAmigos.length);
+  let nomeSorteado = nomeAmigos[indice];
+  // Pega o h2 do HTML e altera para aparecer o nome sorteado na tela
+  let titulo = document.querySelector('h3')
+  titulo.innerHTML = `O nome do seu amigo secreto é ${nomeSorteado}!`;
+  // Remove o nome sorteado da lista
+  nomeAmigos.splice(indice, 1);
+  // Chama a função para atualizar a lista visivel
+  criarListaVisivel();
+}
