@@ -15,9 +15,6 @@ function adicionarAmigo(){
   document.getElementById('amigo').value = "";
 }
 
-
-
-
 function criarListaVisivel(){
   // pega o elemento ul do HTML e Limpa a lista para nao repetir os nomes
   let listaNomes = document.getElementById('listaAmigos');
