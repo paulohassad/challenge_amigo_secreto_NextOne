@@ -1,6 +1,6 @@
 // Lista dos nomes de amigos inseridos no input
 let nomeAmigos = [];
-// Função para adicionar o nome na lista e verificar que esta sendo preenchido
+
 function adicionarAmigo(){
   let nome = document.getElementById('amigo').value;
   // Validação do nome, caso esteja vazio emite um alerta e retorna apenas quando for válido
@@ -17,7 +17,7 @@ function adicionarAmigo(){
 
 
 
-// Cria uma lista visivel dentro ul do HTML
+
 function criarListaVisivel(){
   // pega o elemento ul do HTML e Limpa a lista para nao repetir os nomes
   let listaNomes = document.getElementById('listaAmigos');
@@ -45,4 +45,13 @@ function sortearAmigo() {
   nomeAmigos.splice(indice, 1);
   // Chama a função para atualizar a lista visivel
   criarListaVisivel();
+}
+
+function reiniciarJogo() {
+  // Zera o array
+  nomeAmigos = [];
+  // Limpa a lista de amigos visível, o campo e o resultado 
+  document.getElementById('listaAmigos').innerHTML = "";
+  document.getElementById('resultado').innerHTML = "";
+  document.getElementById('amigo').value = "";
 }
