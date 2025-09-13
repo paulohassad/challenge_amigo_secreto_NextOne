@@ -89,9 +89,12 @@ body {
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    display: flex;                /* Alinha os botões em linha */
+    justify-content: center;      /* Centraliza horizontalmente */
+    gap: 20px;                    /* Espaço entre os botões */
+    margin-top: 20px;             /* Distância do conteúdo acima */
 }
+
 
 /* Estilos de entrada de texto */
 .input-title {
@@ -144,20 +147,21 @@ ul {
 }
 
 /* Botão de sortear título */
-.button-draw {
+.button-draw, .button-restart {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: auto;
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
 }
 
-.button-draw img {
-    margin-right: 40px;
+.button-draw img, .button-restart img {
+    margin-right: 30px;
 }
 
-.button-draw:hover {
+.button-draw:hover, .button-restart:hover {
     background-color: var(--color-button-hover);
 }
+
